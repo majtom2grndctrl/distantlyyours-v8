@@ -57,6 +57,11 @@ export default ContactCta
     margin: var(--spatial-scale-1) 0 var(--spatial-scale-3);
   }
 }
+.cta {
+  max-width: 20rem;
+  margin-right: auto;
+  margin-left: auto;
+}
 
 @media (--viewport-small) {
   .content {
@@ -65,11 +70,6 @@ export default ContactCta
     & > .title {
       text-align: center;
     }
-  }
-  .cta {
-    max-width: 20rem;
-    margin-right: auto;
-    margin-left: auto;
   }
 }
 @media (--viewport-medium) {

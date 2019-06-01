@@ -31,6 +31,7 @@ export default AnthologyHero
 
 <style lang="postcss" scoped>
 .AnthologyHero {
+  overflow: hidden;
 }
 .title {
   color: var(--white);

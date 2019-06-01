@@ -43,17 +43,16 @@ export default BlogPost
   .text {
     margin: 0 auto;
     max-width: 30rem;
-    padding: 3rem 1.25rem;
+    padding: var(--spatial-scale-5) var(--spatial-scale-2);
   }
   .title {
-    font-size: calc(26rem/16);
-    line-height: calc(32em/26);
+    font-size: var(--type-scale-2);
+    line-height: var(--spatial-scale-6);
     margin-top: 0;
   }
   .cta {
     max-width: 20rem;
-    margin-left: auto;
-    margin-right: auto;
+    margin: var(--spatial-scale-3) auto 0;
   }
 </style>
 

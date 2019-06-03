@@ -164,36 +164,34 @@ export default CaseStudy
   .header {
     background: var(--bg-blue-400);
     color: var(--white);
-    display: flex;
-      flex-direction: column;
     margin: 0 0 3rem 0;
     overflow: hidden;
   }
   .meta {
-    margin: 1em;
+    margin: var(--spatial-scale-2);
   }
   .title {
     color: var(--white);
-    font-size: calc(24rem/16);
-    line-height: 1.4em;
-    margin: .5em 0 .66em 0;
+    font-size: var(--type-scale-2);
+    line-height: var(--spatial-scale-6);
+    margin: 0 0 var(--spatial-scale-2) 0;
   }
   .projectName {
     display: inline-block;
     font-family: var(--font-heading);
     font-weight: 500;
-    margin-right: .666em;
+    margin-right: var(--spatial-scale-1);
   }
   .type {
     display: inline-block;
     font-family: var(--font-heading);
     font-weight: 500;
-    margin-bottom: .66em;
+    margin-bottom: var(--spatial-scale-00);
     opacity: .7;
   }
   .hero {
     text-align: center;
-    margin: .5em 2rem 2rem 2rem;
+    margin: var(--spatial-scale-2);
   }
   .heroImage {
     max-width: 15em;
@@ -201,12 +199,14 @@ export default CaseStudy
   }
   .about {
     color: var(--gray-400);
-    line-height: 1.5em;
+    font-size: var(--type-scale-0);
+    line-height: var(--spatial-scale-2);
     margin: 2rem 1rem;
     & h2 {
       color: var(--gray-600);
-      font-size: 1em;
-      margin: 1.5em 0 .5em;
+      font-size: var(--type-scale-00);
+      line-height: var(--spatial-scale-0);
+      margin: var(--spatial-scale-4) 0 var(--spatial-scale-1);
       text-transform: uppercase;
     }
   }
@@ -222,7 +222,8 @@ export default CaseStudy
   }
   @media (--viewport-small) {
     .title {
-      margin: 1em auto .5em;
+      margin-right: auto;
+      margin-left: auto;
       max-width: 20em;
       text-align: center;
     }
@@ -232,7 +233,10 @@ export default CaseStudy
     .about {
       display: grid;
       grid-template-columns: 6fr 4fr;
-      grid-column-gap: 2rem;
+      grid-column-gap: var(--spatial-scale-2);
+      max-width: 30rem;
+      margin-right: auto;
+      margin-left: auto;
     }
     .team, .skills {
       flex-basis: 50%;
@@ -240,6 +244,7 @@ export default CaseStudy
   }
   @media (--viewport-medium) {
     .header {
+      display: flex;
       align-items: center;
       flex-direction: row;
       min-height: 25rem;
@@ -278,9 +283,14 @@ export default CaseStudy
       max-width: 100%;
     }
     .about {
+      font-size: var(--type-scale-1);
       margin-right: auto;
       margin-left: auto;
+      max-width: unset;
       width: calc(100% * 8/12);
+      & h2 {
+        font-size: var(--type-scale-0);
+      }
     }
   }
 </style>

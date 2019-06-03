@@ -38,47 +38,68 @@ export default Vue.extend ({
 ****************************/
 
 .prismic-content {
-  font-size: calc(16rem/16);
+  font-size: var(--type-scale-0);
   color: var(--gray-400);
   & .lede p {
-    font-size: calc(18rem/16);
-    line-height: calc(26em/18);
+    font-size: var(--type-scale-1);
+    line-height: var(--type-scale-3);
   }
   & img {
     max-width: 100%;
   }
   & p, & ol, & ul {
-    line-height: calc(40em/24);
+    line-height: var(--spatial-scale-4);
+    margin-top: var(--spatial-scale-1);
+    margin-bottom: var(--spatial-scale-2);
   }
   & p, & ol, & ul, & h2, & h3, & h4, & h5, & h6 {
-    margin-right: 1.25rem;
-    margin-left: 1.25rem;
+    margin-right: var(--spatial-scale-2);
+    margin-left: var(--spatial-scale-2);
   }
   & h1, & h2, & h3, & h4, & h5, & h6 {
     color: var(--gray-600);
     margin-top: 1.5em;
     margin-bottom: .75em;
   }
+  & h2 {
+    font-size: var(--type-scale-2);
+    line-height: var(--spatial-scale-6);
+    margin-top: var(--spatial-scale-6);
+    margin-bottom: var(--spatial-scale-1);
+  }
   & figure {
     background: var(--bg-blue-400);
     color: var(--white);
-    font-size: calc(14rem/16);
-    margin: 1rem;
+    font-size: var(--type-scale-0);
+    margin: var(--spatial-scale-2);
     padding: calc(1rem/16) calc(1rem/16) 1.5em calc(1rem/16);
     & a {
       color: var(--white);
     }
     & p {
-      margin: 1em;
+      line-height: var(--spatial-scale-4);
+      margin: var(--spatial-scale-0) var(--spatial-scale-2);
     }
   }
 }
 @media (--viewport-small) {
   .prismic-content {
+    font-size: var(--font-scale-1);
+    & p, & ol, & ul {
+      line-height: var(--spatial-scale-5);
+    }
     & p, & ol, & ul, & h2, & h3, & h4, & h5, & h6 {
       margin-right: auto;
       margin-left: auto;
       max-width: 30rem;
+    }
+    & h2 {
+      font-size: var(--type-scale-4);
+      line-height: var(--spatial-scale-8);
+    }
+    & .lede p {
+      font-size: var(--type-scale-2);
+      line-height: var(--spatial-scale-6);
     }
   }
 }
@@ -116,7 +137,7 @@ export default Vue.extend ({
 }
 @media (--viewport-large) {
   .prismic-content {
-    font-size: calc(24rem/16);
+    font-size: calc(74rem/16);
     & p, & ol, & ul {
       line-height: calc(53em/24);
     }

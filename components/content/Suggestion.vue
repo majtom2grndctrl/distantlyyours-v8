@@ -76,6 +76,9 @@ export default Suggestion
       flex-direction: row;
       align-items: center;
     }
+    .type {
+      font-size: var(--type-scale-00);
+    }
     .content {
       padding: calc(30rem/16);
     }
@@ -83,5 +86,10 @@ export default Suggestion
       font-size: calc(26rem/16);
       line-height: calc(32em/26);
     }
+    .altCta {
+      color: var(--white);
+      font-size: var(--type-scale-0);
+    }
+
   }
 </style>

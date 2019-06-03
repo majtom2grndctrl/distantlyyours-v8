@@ -82,7 +82,7 @@ export default SiteHeader
     filter: blur(.66em);
     font-family: var(--font-heading);
     font-weight: 600;
-    font-size: var(--type-scale-1);
+    font-size: var(--type-scale-0);
     letter-spacing: .166ex;
     opacity: 0;
     pointer-events: none;
@@ -150,7 +150,7 @@ export default SiteHeader
 }
 @media (--viewport-medium) {
   .push-farther{
-    top: calc(var(--spatial-scale-4) + .75em);
+    top: calc(var(--spatial-scale-5) + .25em);
     right: calc(100% * 1/14);
   }
 }

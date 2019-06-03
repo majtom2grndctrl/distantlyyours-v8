@@ -97,6 +97,10 @@ export default StandAlone
       padding: 0;
       width: calc(100% * 3 / 8);
     }
+    .type {
+      font-size: var(--type-scale-00);
+      line-height: var(--spatial-scale-00);
+    }
     .title {
       font-size: calc(28rem/16);
       margin-top: 0;

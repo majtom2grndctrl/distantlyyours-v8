@@ -83,7 +83,8 @@ export default AnthologyHero
     display: none;
   }
   .description {
-    line-height: var(--spatial-scale-4);
+    font-size: var(--type-scale-0);
+    line-height: var(--spatial-scale-3);
   }
   .image {
     margin: 0;

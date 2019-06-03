@@ -90,12 +90,16 @@ export default ContactCta
       margin-left: auto;
     }
     & > .title {
-      font-size: var(--type-scale-3);
+      font-size: var(--type-scale-2);
+      line-height: var(--spatial-scale-5);
       margin-top: 0;
+      margin-bottom: var(--spatial-scale-1);
       text-align: left;
     }
     & > p {
-      line-height: var(--spatial-scale-4);
+      font-size: var(--type-scale-0);
+      line-height: var(--spatial-scale-3);
+      margin-bottom: var(--spatial-scale-2);
     }
   }
   .image-container {

@@ -85,6 +85,10 @@ export default AnthologyItem
     }
     & .type {
       color: inherit;
+      font-size: var(--type-scale-00);
+      line-height: var(--spatial-scale-00);
+    }
+    & .description {
     }
     & .cta {
       background-color: var(--white);

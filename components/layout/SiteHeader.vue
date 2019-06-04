@@ -51,8 +51,11 @@ export default SiteHeader
     margin: var(--spatial-scale-2) var(--spatial-scale-2) 0 var(--spatial-scale-2);
   }
   .logo-container {
-    display: inline-block;
-    margin-right: var(--spatial-scale-4);
+    display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+      align-content: center;
+    margin-right: var(--spatial-scale-2);
     &:hover {
       & .distantly-yours {
         opacity: 1;
@@ -71,7 +74,7 @@ export default SiteHeader
     }
   }
   .logo-link {
-    display: inline-block;
+    display: block;
     position: relative;
   }
   .logo {
@@ -102,11 +105,15 @@ export default SiteHeader
   }
   @media (--viewport-medium) {
     .SiteHeader {
+      display: grid;
+        grid-column-gap: var(--spatial-scale-2);
+        grid-template-columns: 1fr 7fr 4fr;
       margin: var(--spatial-scale-4) auto 0 auto;
       width: calc(100% * 12 / 14);
     }
     .logo-container {
-      width: calc(100% * 1 / 12);
+      grid-area: 1 / 1 / 2 / 2;
+      width: auto;
       margin-right: 0;
     }
     .logo {
@@ -163,16 +170,19 @@ export default SiteHeader
   display: flex;
     flex-direction: row;
     align-items: center;
-  margin: 0 0 0 calc(-8em/16);
+    align-content: center;
+  margin: 0;
   transition: transform .5s ease, opacity .5s;
   & > a {
     border-bottom: calc(1rem/16) solid rgba(3, 161, 213, 0);
     color: #97A3A7;
-    display: block;
+    display: flex;
+      align-items: center;
     font-size: var(--type-scale-0);
-    line-height: 1em;
+    height: var(--spatial-scale-4);
+    line-height: var(--spatial-scale-0);
     margin: 0 var(--type-scale-1) 0 0;
-    padding: calc(10rem/16) calc(8em/16) calc(8em/16);
+    padding: 0 var(--spatial-scale-1);
     text-decoration: none;
     transition: border-bottom-color .66s;
     &.active {
@@ -183,12 +193,15 @@ export default SiteHeader
 @media (min-resolution: 1.25dppx) {
   .site-nav > a.active {
     border-bottom-width: calc(1.5rem/16);
-    padding-bottom: calc(7.5rem/16);
   }
 }
 @media (--viewport-medium) {
-  .site-nav > a {
-    font-size: var(--type-scale-0);
+  .site-nav {
+    grid-area: 1 / 2 / 2 / 3;
+    margin-left: calc(var(--spatial-scale-1) * -1);
+    & > a {
+      font-size: var(--type-scale-0);
+    }
   }
 }
 

@@ -70,6 +70,7 @@ module.exports = {
         })
         .catch(err => {
           console.warn('Hey, something happened to the network.', err)
+          console.log('Using datamocks for blog posts: ', blogDataMock)
           // If we’re in dev mode, return a data mock. Otherwise, return null and force an error.
           return process.env.NODE_ENV === 'development' ? { blogDataMock } : { results: [] }
         })

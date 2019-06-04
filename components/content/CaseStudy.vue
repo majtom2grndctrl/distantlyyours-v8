@@ -4,8 +4,7 @@
       <div class="meta">
         <h1 v-html="data.headline" class="title" />
         <div>
-          <span class="projectName">{{ data.meta.project_name }}</span>
-          <span class="type">{{ data.meta.case_study_type }}</span>
+          <span class="projectName">{{ data.meta.project_name }}</span><span class="type">{{ data.meta.case_study_type }}</span>
         </div>
         <div class="projectDates">{{ data.meta.start_date }}&ndash;{{ data.meta.end_date }}</div>
       </div>
@@ -244,7 +243,8 @@ export default CaseStudy
   }
   @media (--viewport-medium) {
     .header {
-      display: flex;
+      display: grid;
+      grid-template-columns: 1fr 4fr 1fr 5fr 1fr;
       align-items: center;
       flex-direction: row;
       min-height: 25rem;
@@ -257,9 +257,9 @@ export default CaseStudy
     }
     .meta {
       box-sizing: border-box;
-      flex-basis: 50%;
+      grid-area: 1 / 2 / 2 / 3;
       margin: 0;
-      padding: 0 calc(100% * 1 / 12) 0 calc(100% * 1 / 12);
+      padding: 0;
       text-align: left;
       width: 100%;
     }
@@ -274,9 +274,9 @@ export default CaseStudy
     }
     .hero {
       box-sizing: border-box;
-      flex-basis: 50%;
+      grid-area: 1 / 4 / 2 / 5;
       margin: 0;
-      padding: 3rem calc(100% * 1 / 12) 3rem 0;
+      padding: var(--spatial-scale-5) 0;
       width: 100%;
     }
     .heroImage {
@@ -284,6 +284,7 @@ export default CaseStudy
     }
     .about {
       font-size: var(--type-scale-1);
+      line-height: var(--spatial-scale-3);
       margin-right: auto;
       margin-left: auto;
       max-width: unset;

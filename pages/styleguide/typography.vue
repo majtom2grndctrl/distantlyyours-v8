@@ -1,10 +1,13 @@
 <template>
   <style-guide-page title="Typography">
     <div class="headings-intro">
-      <h2>Headings<br />are&nbsp;in<br />Poppins</h2>
+      <h2 class="headings-title">Headings<br />are&nbsp;in<br />Poppins</h2>
       <specimen class="heading">
         Aa Ee Dd
       </specimen>
+    </div>
+    <div class="body-copy-sample">
+      <p>Body copy is Libre Franklin. The base font size is 16px on mobile devices, and approximately 18px on desktop devices.</p>
     </div>
     <div class="type-scale">
       <div v-for="(item, index) in textHeadings" :key="`heading-${index}`" :class="`type-scale-${item}`">Type Scale {{ item }}</div>
@@ -39,8 +42,14 @@ export default TypographyPage
 <style lang="postcss" scoped>
   .headings-intro {
   }
+  .headings-title {
+    font-size: var(--type-scale-5);
+    line-height: var(--spatial-scale-8);
+    margin: 0 0 var(--spatial-scale-5) 0;
+  }
   .Specimen.heading {
     font-family: var(--font-heading);
+    margin: 0 0 var(--spatial-scale-5) 0;
   }
   @media(--viewport-small) {
     .headings-intro {
@@ -48,7 +57,17 @@ export default TypographyPage
       grid-template-columns: 1fr 1fr;
       grid-gap: var(--spatial-scale-2);
     }
+  @media(--viewport-medium) {
+    .headings-intro {
+      margin: 0 0 var(--spatial-scale-5) 0;
+    }
+    .headings-title {
+      font-size: var(--type-scale-6);
+      line-height: var(--spatial-scale-8);
+      margin: 0;
+    }
   }
+}
 
 
   .type-scale {
